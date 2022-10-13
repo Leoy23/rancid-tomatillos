@@ -1,0 +1,10 @@
+.movie-cards {
+  box-sizing: border-box;
+  margin: 5%;
+  color: white;
+}
+
+img {
+  height: 50vh;
+  width: 50wv;
+}
