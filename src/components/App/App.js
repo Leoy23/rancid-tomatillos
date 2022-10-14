@@ -10,6 +10,13 @@ class App extends Component {
     this.state = movieData
   }
 
+
+// componentDidMount() {
+//   fetch('https://rancid-tomatillos.herokuapp.com/api/v2')
+//     .then(response => response.json())
+//     .catch(error => console.log(error))
+// }
+
   // setSingleMovie = (id) => {
   //   this.setState({singleMovie})
   // }
