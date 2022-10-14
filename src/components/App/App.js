@@ -2,12 +2,18 @@ import './App.css';
 import React, { Component } from 'react'
 import movieData from '../../movieData.js'
 import Movies from '../Movies/Movies.js'
+// import singleMovie from "../../singleMovie.js"
 
 class App extends Component {
   constructor() {
     super();
     this.state = movieData
   }
+
+  // setSingleMovie = (id) => {
+  //   this.setState({singleMovie})
+  // }
+
   render() {
     return (
       <main className='App'>

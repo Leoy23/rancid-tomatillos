@@ -3,7 +3,6 @@ import MovieCards from '../MovieCards/MovieCards.js'
 import '../Movies/Movies.css'
 
 const Movies = (props) => {
-  console.log(props.movies)
   const movieCards = props.movies.map(movie => {
     return (
       <MovieCards
