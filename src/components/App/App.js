@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react'
 import Movies from '../Movies/Movies.js'
+import CurrentMovie from '../CurrentMovie/CurrentMovie';
 import { getAllData } from '../../apiCalls'
 
 class App extends Component {
@@ -26,13 +27,20 @@ componentDidMount() {
     .then(data => this.setState({movies: data}))
     .catch(error => alert(error))
   }
+  setMultipleMovies = () => {
+    getAllData('/movies')
+    .then(data => {
+      this.setState({movies: [...data[0].movies]})
+    })
+    .catch(error => console.log(error))
+  }
 
   render() {
     return (
       <main className='App'>
         <h1>Rancid Tomatillos</h1>
         {this.state.movies.length > 1 && <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/>}
-        {this.state.movies.movie && <h2>{this.state.movies.movie.title}</h2>}
+        {this.state.movies.movie && <CurrentMovie movies={this.state.movies} setMultipleMovies={this.setMultipleMovies} />}
       </main>
     ) 
   }
