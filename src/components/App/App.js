@@ -1,21 +1,25 @@
 import './App.css';
 import React, { Component } from 'react'
-import movieData from '../../movieData.js'
 import Movies from '../Movies/Movies.js'
+import { getAllData } from '../../apiCalls'
 // import singleMovie from "../../singleMovie.js"
 
 class App extends Component {
   constructor() {
     super();
-    this.state = movieData
+    this.state = {
+      movies: [],
+    }
   }
 
 
-// componentDidMount() {
-//   fetch('https://rancid-tomatillos.herokuapp.com/api/v2')
-//     .then(response => response.json())
-//     .catch(error => console.log(error))
-// }
+componentDidMount() {
+    getAllData('/movies')
+    .then(data => {
+      this.setState({movies: [...data[0].movies]})
+    })
+    .catch(error => console.log(error))
+}
 
   // setSingleMovie = (id) => {
   //   this.setState({singleMovie})
