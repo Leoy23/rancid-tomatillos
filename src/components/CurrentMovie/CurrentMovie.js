@@ -1,7 +1,7 @@
 import React from "react"
 import "./CurrentMovie.css"
 
-const CurrentMovie = ({ movies }) => {
+const CurrentMovie = ({ movies, setMultipleMovies }) => {
     console.log(movies)
     return (
         <div className="single-movie-page">
@@ -18,6 +18,7 @@ const CurrentMovie = ({ movies }) => {
                 <h3>{`Tagline: '${movies.movie.tagline}'`}</h3>
             </div>
             <img className="poster-image" src={movies.movie.poster_path} alt={`${movies.movie.title} poster`} />
+            <button className="back-button" onClick={() => setMultipleMovies()}>BACK</button>
             </div> 
         </div>
     )
