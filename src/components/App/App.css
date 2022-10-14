@@ -1,7 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 .App {
+  font-family:'Concert One', cursive;
   text-align: center;
   height: 100%;
   width: 100%;
+  margin-top: -70px;
 }
 
+main {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 5em;
+  background: -webkit-linear-gradient(#EC9F05, #ff4e00);
+  background-clip: text; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
