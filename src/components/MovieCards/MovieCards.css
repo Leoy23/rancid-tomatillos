@@ -7,4 +7,5 @@
 img {
   height: 50vh;
   width: 50wv;
+  cursor: pointer;
 }
