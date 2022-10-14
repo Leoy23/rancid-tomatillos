@@ -28,7 +28,7 @@ componentDidMount() {
   render() {
     return (
       <main className='App'>
-        <h1>Rancid Tomatillos</h1>
+        <h1> 🍅 Rancid Tomatillos</h1>
         <Movies movies={this.state.movies} />
       </main>
     )

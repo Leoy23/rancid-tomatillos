@@ -5,7 +5,7 @@ const MovieCard = ({id, posterPath, title, rating}) => {
   return (
     <div className='movie-cards'>
       <img src={posterPath} alt='movie posters'/>
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       <p>{rating} ⭐</p>
     </div>
   )
