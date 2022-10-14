@@ -1,11 +1,11 @@
 import React from 'react';
 import './MovieCards.css'
 
-const MovieCard = ({id, posterPath, title, rating}) => {
+const MovieCard = ({id, posterPath, title, rating, setSingleMovie}) => {
   return (
     <div className='movie-cards'>
-      <img src={posterPath} alt='movie posters'/>
-      <h2>{title}</h2>
+      <img src={posterPath} onClick = { () => setSingleMovie(id) }/>
+      <h3>{title}</h3>
       <p>{rating} ⭐</p>
     </div>
   )
