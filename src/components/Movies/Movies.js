@@ -13,6 +13,7 @@ const Movies = (props) => {
         rating={movie.average_rating.toFixed(1)}
         releaseDate={movie.release_date}
         key={movie.id}
+        setSingleMovie={props.setSingleMovie}
         />
     )
   })
