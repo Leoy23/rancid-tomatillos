@@ -86,7 +86,7 @@ The program displays a grid of movie cards that can be selected to view specifie
 Cole Anthony - [LinkedIn](https://www.linkedin.com/in/cole-edwin-anthony/) - cole.edwin.anthony@gmail.com
 
 Lee Young - [LinkedIn](www.linkedin.com/in/leah-young-fe)
-- younglee.fe@gmail.com
+ younglee.fe@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
