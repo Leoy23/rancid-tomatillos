@@ -3,6 +3,9 @@
   margin: 5%;
   color: white;
 }
+.movie-cards:hover {
+  transform: scale(1.05);
+}
 
 img {
   height: 50vh;
