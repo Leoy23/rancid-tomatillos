@@ -18,7 +18,7 @@ componentDidMount() {
     .then(data => {
       this.setState({movies: [...data[0].movies]})
     })
-    .catch(error => console.log(error))
+    .catch(error => alert(error))
 }
 
   setSingleMovie = (id) => {
