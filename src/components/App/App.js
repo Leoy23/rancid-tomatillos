@@ -18,21 +18,33 @@ componentDidMount() {
     .then(data => {
       this.setState({movies: [...data[0].movies]})
     })
-    .catch(error => alert(error))
-}
+    .catch(error => {if (error[0] == 5)
+      {alert('oops! its a server issue')
+     } else {
+       alert('oops! something went wrong')
+     } })
+   }
 
   setSingleMovie = (id) => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
     .then(response => response.json())
     .then(data => this.setState({movies: data}))
-    .catch(error => alert(error))
-  }
+    .catch(error => {if (error[0] == 5)
+      {alert('oops! its a server issue')
+     } else {
+       alert('oops! something went wrong')
+     } })
+   }
   setMultipleMovies = () => {
     getAllData('/movies')
     .then(data => {
       this.setState({movies: [...data[0].movies]})
     })
-    .catch(error => console.log(error))
+    .catch(error => {if (error[0] == 5)
+      {alert('oops! its a server issue')
+     } else {
+       alert('oops! something went wrong')
+    } })
   }
 
   render() {
