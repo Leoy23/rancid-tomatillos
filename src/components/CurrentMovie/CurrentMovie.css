@@ -8,8 +8,9 @@
 .backdrop-image {
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     margin-left: 0%;
+    margin-top: -70px;
 }
 
 .movie-info-container {
@@ -21,19 +22,18 @@
 }
 
 .movie-info {
-    border: 2px black;
     border-radius: 5%;
     background-color: rgba(220, 220, 208, 0.7);
     color: black;
     width: 25%;
     height: 90%;
     padding: 2%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .poster-image {
-    height: auto;
-    width: 25%;
+    width: 25rem;
+    height:40rem;
     border-radius: 5%;
 }
 
