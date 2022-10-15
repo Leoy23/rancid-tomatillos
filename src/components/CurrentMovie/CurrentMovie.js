@@ -15,7 +15,7 @@ const CurrentMovie = ({ movies, setMultipleMovies }) => {
                 <h3>{`Revenue: $${movies.movie.revenue}`}</h3>
                 <h3>{`Runtime: ${movies.movie.runtime}`}</h3>
                 <h3>{`Genres: ${movies.movie.genres.join(", ")}`}</h3>
-                <h3>{`Tagline: '${movies.movie.tagline}'`}</h3>
+                {movies.movie.tagline != '' && <h3>{`Tagline: '${movies.movie.tagline}'`}</h3>}
             </div>
             <img className="poster-image" src={movies.movie.poster_path} alt={`${movies.movie.title} poster`} />
             <button className="back-button" onClick={() => setMultipleMovies()}>BACK</button>
