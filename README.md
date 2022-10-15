@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-# Around - Travel Tracker
+# Rancid Tomatillos
 
 ## Table of Contents
 - [About The Project](#about-the-project)
