@@ -2,7 +2,8 @@ import './App.css';
 import React, { Component } from 'react'
 import Movies from '../Movies/Movies.js'
 import CurrentMovie from '../CurrentMovie/CurrentMovie';
-import { getAllData } from '../../apiCalls'
+import  getAllData  from '../../apiCalls'
+import { Route, NavLink, Switch } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -24,17 +25,7 @@ componentDidMount() {
        alert('oops! something went wrong')
      } })
    }
-
-  setSingleMovie = (id) => {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-    .then(response => response.json())
-    .then(data => this.setState({movies: data}))
-    .catch(error => {if (error[0] == 5)
-      {alert('oops! its a server issue')
-     } else {
-       alert('oops! something went wrong')
-     } })
-   }
+   
   setMultipleMovies = () => {
     getAllData('/movies')
     .then(data => {
@@ -51,8 +42,15 @@ componentDidMount() {
     return (
       <main className='App'>
         <h1>Rancid Tomatillos</h1>
-        {this.state.movies.length > 1 && <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/>}
-        {this.state.movies.movie && <CurrentMovie movies={this.state.movies} setMultipleMovies={this.setMultipleMovies} />}
+        <Switch>
+          <Route exact path="/" render={() => <Movies movies={this.state.movies}/>} />
+          <Route exact path="/movies/:id" render={({match}) => {
+          return <CurrentMovie 
+          id={parseInt(match.params.id)}
+          setMultipleMovies={this.setMultipleMovies} />
+          }}
+          />
+        </Switch>
       </main>
     ) 
   }
