@@ -31,9 +31,9 @@ class CurrentMovie extends Component {
     const newState = {
         backdrop_path: state.backdrop_path,
         overview: state.overview,
-        budget: state.budget,
-        release_date: state.release_date,
-        revenue: state.revenue,
+        budget: state.budget.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        release_date: state.release_date.split('-').join('/'),
+        revenue: state.revenue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         runtime: state.runtime,
         tagline: state.tagline,
         title: state.title,
@@ -55,7 +55,7 @@ render() {
         <div className="movie-info">
             <h3>{overview}</h3>
             <h3>{`Release date: ${release_date}`}</h3>
-            <h3>{`Rating: ${average_rating}⭐`}</h3>
+            <h3>{`Rating: ${average_rating}/10⭐`}</h3>
             {budget !== 0 && <h3>{`Budget: $${budget}`}</h3>}
             {revenue !== 0 && <h3>{`Revenue: $${revenue}`}</h3>}
             {runtime !== 0 && <h3>{`Runtime: ${runtime} minutes`}</h3>}
