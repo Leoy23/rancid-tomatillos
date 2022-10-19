@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Movies from '../Movies/Movies.js'
 import CurrentMovie from '../CurrentMovie/CurrentMovie';
 import  getAllData  from '../../apiCalls'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -41,7 +41,9 @@ componentDidMount() {
   render() {
     return (
       <main className='App'>
+        <Link to="/" style={{ textDecoration: 'none' }}>
         <h1>Rancid Tomatillos</h1>
+        </Link>
         <Switch>
           <Route exact path="/" render={() => <Movies movies={this.state.movies}/>} />
           <Route exact path="/movies/:id" render={({match}) => {

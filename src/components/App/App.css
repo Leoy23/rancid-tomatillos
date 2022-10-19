@@ -19,4 +19,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.home-logo {
+  text-decoration: 'none';
+}
 
