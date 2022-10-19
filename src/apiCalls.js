@@ -12,4 +12,4 @@ const getAllData = (data) => {
     return result;
 }
 
-export { getAllData }
+export default getAllData 
