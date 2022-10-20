@@ -7,7 +7,8 @@ class CurrentMovie extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            singleMovie: []
+            singleMovie: [],
+            error: ''
         }
     }
     componentDidMount = () => {
@@ -20,11 +21,7 @@ class CurrentMovie extends Component {
         const formattedData = this.formatData(data[0].movie);
         this.setState({singleMovie: formattedData}
         )})
-    .catch(error => {if (error[0] === 5)
-      {alert('oops! its a server issue')
-     } else {
-       alert('oops! something went wrong')
-     } })
+        .catch(error => this.setState({error: error}))
    }
 
    formatData = (state) => {
@@ -48,7 +45,9 @@ class CurrentMovie extends Component {
 render() {
     const { backdrop_path, overview, budget, release_date, average_rating, revenue, runtime, genres, tagline, title, poster_path} = this.state.singleMovie
     return(
-    <div className="single-movie-page">
+    
+   <div className="single-movie-page">
+        {this.state.error && <h1>Oops! Something went wrong!</h1>}
         {backdrop_path !== 'https://www.esm.rochester.edu/uploads/NoPhotoAvailable.jpg' 
             && <img className="backdrop-image" src={backdrop_path} alt={`${title} poster`} />}
         <div className="movie-info-container">
@@ -58,15 +57,15 @@ render() {
             <h3>{`Rating: ${average_rating}/10⭐`}</h3>
             {budget !== 0 && <h3>{`Budget: $${budget}`}</h3>}
             {revenue !== 0 && <h3>{`Revenue: $${revenue}`}</h3>}
-            {runtime !== 0 && <h3>{`Runtime: ${runtime} minutes`}</h3>}
-            {genres !== [] &&<h3> {`Genres: ${genres}`}</h3>}
+            {runtime !== 0&& <h3>{`Runtime: ${runtime} minutes`}</h3>}
+            {genres &&<h3> {`Genres: ${genres}`}</h3>}
             {tagline && <h3>{`Tagline: '${tagline}'`}</h3>}
         </div>
         <img className="poster-image" src={poster_path} alt={`${title} poster`} />
         <Link to="/">
         <button className="back-button">BACK</button>
         </Link>
-        </div> 
+        </div>
     </div>
         )
     }
