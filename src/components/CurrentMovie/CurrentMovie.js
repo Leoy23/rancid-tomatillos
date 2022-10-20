@@ -58,8 +58,8 @@ render() {
             <h3>{`Rating: ${average_rating}/10⭐`}</h3>
             {budget !== 0 && <h3>{`Budget: $${budget}`}</h3>}
             {revenue !== 0 && <h3>{`Revenue: $${revenue}`}</h3>}
-            {runtime !== 0 && <h3>{`Runtime: ${runtime} minutes`}</h3>}
-            {genres !== [] &&<h3> {`Genres: ${genres}`}</h3>}
+            {runtime !== 0&& <h3>{`Runtime: ${runtime} minutes`}</h3>}
+            {genres &&<h3> {`Genres: ${genres}`}</h3>}
             {tagline && <h3>{`Tagline: '${tagline}'`}</h3>}
         </div>
         <img className="poster-image" src={poster_path} alt={`${title} poster`} />

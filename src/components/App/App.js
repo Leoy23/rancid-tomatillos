@@ -10,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       movies: [],
+      error: '',
     }
   }
 
@@ -19,11 +20,8 @@ componentDidMount() {
     .then(data => {
       this.setState({movies: [...data[0].movies]})
     })
-    .catch(error => {if (error[0] === 5)
-      {alert('oops! its a server issue')
-     } else {
-       alert('oops! something went wrong')
-     } })
+    .catch(error => this.setState({error: error.message})
+    )
    }
    
   setMultipleMovies = () => {
@@ -31,11 +29,8 @@ componentDidMount() {
     .then(data => {
       this.setState({movies: [...data[0].movies]})
     })
-    .catch(error => {if (error[0] === 5)
-      {alert('oops! its a server issue')
-     } else {
-       alert('oops! something went wrong')
-    } })
+    .catch(error => this.setState({error: error.message})
+    )
   }
 
   render() {
@@ -44,6 +39,7 @@ componentDidMount() {
         <Link to="/" style={{ textDecoration: 'none' }}>
         <h1>Rancid Tomatillos</h1>
         </Link>
+        {this.state.error && <h1>Oops! Something went wrong!</h1>}
         <Switch>
           <Route exact path="/" render={() => <Movies movies={this.state.movies}/>} />
           <Route exact path="/movies/:id" render={({match}) => {
