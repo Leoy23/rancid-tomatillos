@@ -20,7 +20,7 @@ componentDidMount() {
     .then(data => {
       this.setState({movies: [...data[0].movies]})
     })
-    .catch(error => this.setState({error: error.message})
+    .catch(error => this.setState({error: error})
     )
    }
    
@@ -29,7 +29,7 @@ componentDidMount() {
     .then(data => {
       this.setState({movies: [...data[0].movies]})
     })
-    .catch(error => this.setState({error: error.message})
+    .catch(error => this.setState({error: error})
     )
   }
 
@@ -39,18 +39,17 @@ componentDidMount() {
         <Link to="/" style={{ textDecoration: 'none' }}>
         <h1>Rancid Tomatillos</h1>
         </Link>
-        {this.state.error && <h1>Oops! Something went wrong!</h1>}
-        <Switch>
+          {this.state.error && <h1>Oops! Something went wrong!</h1>}
+        
           <Route exact path="/" render={() => <Movies movies={this.state.movies}/>} />
           <Route exact path="/movies/:id" render={({match}) => {
-            console.log("match", { match })
           return  <CurrentMovie 
           id={parseInt(match.params.id)}
           setMultipleMovies={this.setMultipleMovies}
           />
           }}
           />
-        </Switch>
+        
       </main>
     ) 
   }
