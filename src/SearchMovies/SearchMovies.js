@@ -6,7 +6,6 @@ class SearchMovies extends Component {
         super(props);
         this.state = {
             value: '',
-            error: '',
         }
     }
 
@@ -29,7 +28,6 @@ class SearchMovies extends Component {
                     />
                 </form>
             </section>
-            
         )
     }
 }
