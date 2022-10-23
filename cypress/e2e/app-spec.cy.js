@@ -24,23 +24,25 @@ describe('Page Load', () => {
 
 })
 
-describe('Search bar functionaltiy', () => {
+describe('Search bar functionality', () => {
   it('should display a search bar on the home view', () => {
     cy.visit('http://localhost:3000');
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/') 
     cy.get('input')
   })
 
-  it('should dipslay corresponding movie titles related to search input', () => {
+  it.only('should dipslay corresponding movie titles related to search input', () => {
     cy.visit('http://localhost:3000');
-    cy.get('input[type="text"]').type('mulan').should('have.value', 'mulan')
-  })
-
-  it('should clear input field once movie is selected', () => {
-    
+    cy.get('input[type="text"]').type('Mulan').should('have.value', 'Mulan');
+    cy.get('h3').contains('Mulan').click();
   })
 
   it('should display an error message when the input does not match movie titles', () => {
 
+  })
+
+  it('should remove the search bar from view on current movie display', () => {
+
+    
   })
 })
