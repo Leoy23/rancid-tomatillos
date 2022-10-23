@@ -11,7 +11,7 @@ class SearchMovies extends Component {
 
     handleChange = async (event) => {
         await this.setState({value: event.target.value})
-        this.props.searchMovies(this.state.value)
+        this.props.searchMovies(this.state.value);
     }
 
     render() {
