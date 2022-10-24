@@ -71,7 +71,7 @@ The program displays a grid of movie cards that can be selected to view specifie
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Accessibility
-
+We have ensured that there are 0 errors on Web Accessability Evaluation Tool and a score of 97 on Lighthouse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
