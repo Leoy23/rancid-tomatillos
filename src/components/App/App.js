@@ -57,7 +57,7 @@ componentDidMount() {
           />
           }}
           />
-          <Route render={() => <h2>Oops! this title does not exist! Try again please</h2>}/>
+          <Route render={() => <h2>Oops! This title does not exist! Try again please</h2>}/>
       </main>
     ) 
   }
