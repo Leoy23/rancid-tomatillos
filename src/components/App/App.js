@@ -52,12 +52,11 @@ componentDidMount() {
           {this.state.error && <h1>Oops! Something went wrong!</h1>}
           <Route exact path="/" render={() => <Movies movies={this.state.movies} />} />
           <Route exact path="/movies/:id" render={({match}) => {
-          return  <CurrentMovie 
-          id={parseInt(match.params.id)}
-          />
-          }}
-          />
-          <Route render={() => <h2>Oops! This title does not exist! Try again please</h2>}/>
+            return  <CurrentMovie 
+            id={parseInt(match.params.id)}
+            />
+            }}
+            />
       </main>
     ) 
   }

@@ -21,6 +21,7 @@ const Movies = (props) => {
   return (
     <div className='movies-container'>
       {movieCards}
+      {props.movies.length === 0 && <h2>Oops! This title does not exist! Try again please</h2>}
     </div>
   )
 }
