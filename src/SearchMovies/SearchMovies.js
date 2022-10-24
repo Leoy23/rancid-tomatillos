@@ -17,11 +17,13 @@ class SearchMovies extends Component {
     render() {
         return (
             <section className='search-input-box'>
+                <label className='form-label' htmlFor='search-bar'>Search</label>
                 <form className='search-input-field'>
                     <input
                     className='search-field'
                     type='text'
                     placeholder='SEARCH MOVIES'
+                    id='search-bar'
                     name='search bar'
                     value={this.state.value}
                     onChange={this.handleChange}
