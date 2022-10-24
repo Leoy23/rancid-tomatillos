@@ -13,6 +13,7 @@ const Movies = (props) => {
         title={movie.title}
         rating={movie.average_rating.toFixed(1)}
         releaseDate={movie.release_date}
+        hideSearchBar={props.hideSearchBar}
         key={movie.id}
         />
     )

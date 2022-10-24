@@ -63,7 +63,7 @@ render() {
         </div>
         <img className="poster-image" src={poster_path} alt={`${title} poster`} />
         <Link to="/">
-        <button className="back-button">BACK</button>
+        <button className="back-button" onClick={() => this.props.showSearchBar()}>BACK</button>
         </Link>
         </div>
     </div>

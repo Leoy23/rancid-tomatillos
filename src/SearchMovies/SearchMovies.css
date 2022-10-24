@@ -1,0 +1,14 @@
+.search-field {
+    height: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.search-input-box {
+    padding: 10px;
+}
+
+.hide {
+    display: none;
+}
