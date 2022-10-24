@@ -66,6 +66,7 @@ You can find the project [here](https://github.com/Leoy23/rancid-tomatillos.git)
 ## Usage
 The program displays a grid of movie cards that can be selected to view specified movie details.
 
+[screen-recorder-mon-oct-24-2022-16-38-08.webm](https://user-images.githubusercontent.com/103971359/197643178-1802a6cd-3975-431f-988d-7c4a2d6465a8.webm)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
