@@ -104,7 +104,7 @@ The following resources helped us build this project:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Reflections
-We felt that we learned much more about how OOP works and it helps organize the code much better than working with a scripts file where all of our dom manipulation lives. Cyrpess was a struggle at first, but we began to understand how to test user stories and can definitely understand it's usefulness now. Router was so fun and made things much easier.
+We felt that we learned much more about how OOP works and how much better organized the code can be than working with a scripts file where all of our dom manipulation lives. Cyrpess was a struggle at first, but we began to understand how to test user stories and can definitely understand it's usefulness now. Router was so fun and made things much easier.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
