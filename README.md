@@ -71,12 +71,12 @@ The program displays a grid of movie cards that can be selected to view specifie
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Accessibility
-
+We have ensured that there are 0 errors on Web Accessability Evaluation Tool and a score of 97 on Lighthouse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Testing
-   "Will be utilizing Cypress for testing"
+   We utilized Cypress to test this application ensuring that every user story is accounted for.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +103,7 @@ The following resources helped us build this project:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Reflections
-
+We felt that we learned much more about how OOP works and it helps organize the code much better than working with a scripts file where all of our dom manipulation lives. Cyrpess was a struggle at first, but we began to understand how to test user stories and can definitely understand it's usefulness now. Router was so fun and made things much easier.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
