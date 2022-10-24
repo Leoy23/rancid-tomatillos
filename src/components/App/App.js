@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Movies from '../Movies/Movies.js'
 import CurrentMovie from '../CurrentMovie/CurrentMovie';
 import  getAllData  from '../../apiCalls'
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import SearchMovies from '../../SearchMovies/SearchMovies';
 
 class App extends Component {
