@@ -1,14 +1,17 @@
 .movie-cards {
   box-sizing: border-box;
-  margin: 5%;
+  width: 20rem;
   color: white;
 }
 .movie-cards:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 img {
   height: 50vh;
   width: 50wv;
   cursor: pointer;
+}
+.title {
+  overflow-wrap: break-word;
 }
