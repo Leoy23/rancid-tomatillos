@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Movies from '../Movies/Movies.js'
 import CurrentMovie from '../CurrentMovie/CurrentMovie';
 import  getAllData  from '../../apiCalls'
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 import SearchMovies from '../../SearchMovies/SearchMovies';
 
 class App extends Component {
@@ -52,12 +52,12 @@ componentDidMount() {
           {this.state.error && <h1>Oops! Something went wrong!</h1>}
           <Route exact path="/" render={() => <Movies movies={this.state.movies} />} />
           <Route exact path="/movies/:id" render={({match}) => {
-          return  <CurrentMovie 
-          id={parseInt(match.params.id)}
-          />
-          }}
-          />
-          <Route render={() => <h2>Oops! this title does not exist! Try again please</h2>}/>
+            return  <CurrentMovie 
+            id={parseInt(match.params.id)}
+            />
+            }}
+            />
+          
       </main>
     ) 
   }

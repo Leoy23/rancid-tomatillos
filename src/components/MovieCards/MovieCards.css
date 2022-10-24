@@ -1,6 +1,7 @@
 .movie-cards {
   box-sizing: border-box;
   width: 20rem;
+  margin: 5%;
   color: white;
 }
 .movie-cards:hover {
@@ -8,8 +9,8 @@
 }
 
 img {
-  height: 50vh;
-  width: 50wv;
+  
+  width: 20rem;
   cursor: pointer;
 }
 .title {
