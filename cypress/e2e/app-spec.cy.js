@@ -31,18 +31,17 @@ describe('Search bar functionality', () => {
     cy.get('input')
   })
 
-  it.only('should dipslay corresponding movie titles related to search input', () => {
+  it('should display corresponding movie titles related to search input', () => {
     cy.visit('http://localhost:3000');
     cy.get('input[type="text"]').type('Mulan').should('have.value', 'Mulan');
     cy.get('h3').contains('Mulan').click();
   })
 
   it('should display an error message when the input does not match movie titles', () => {
+    cy.visit('http://localhost:3000');
+    cy.get('input[type="text"]').type('Shrek').should('have.value', 'Shrek');
+    cy.get('h2').contains('Oops! This title does not exist! Try again please')
 
   })
 
-  it('should remove the search bar from view on current movie display', () => {
-
-    
-  })
 })
