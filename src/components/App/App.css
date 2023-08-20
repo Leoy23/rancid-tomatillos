@@ -2,24 +2,47 @@
   text-align: center;
   height: 100%;
   width: 100%;
-  margin-top: -70px;
+  margin-top: -2rem;
 }
 
 main {
   background-color: black;
-  color: white;
+  color: #ffffff;
   margin: 0;
 }
 
 h1 {
-  font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
   font-size: 5em;
-  background: -webkit-linear-gradient(#EC9F05, #ff4e00);
-  background-clip: text; 
+  background: -webkit-linear-gradient(#ec9f05, #ff4e00);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-right: 2rem;
+  padding-top: 1rem;
 }
 .home-logo {
-  text-decoration: 'none';
+  text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 3em;
+    padding-top: 3rem;
+  }
+  .App {
+    margin-top: -4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .App {
+    margin-top: -4rem;
+  }
+}

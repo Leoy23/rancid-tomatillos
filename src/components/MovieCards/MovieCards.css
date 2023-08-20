@@ -1,18 +1,22 @@
 .movie-cards {
-  box-sizing: border-box;
-  width: 20rem;
-  margin: 5%;
+  width: 16rem;
+  padding: 1rem;
   color: white;
 }
 .movie-cards:hover {
-  transform: scale(1.03);
+  transform: scale(1.1);
 }
 
 img {
-  
-  width: 20rem;
+  width: 15rem;
   cursor: pointer;
 }
 .title {
   overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+h3,
+p {
+  text-decoration: none;
 }
