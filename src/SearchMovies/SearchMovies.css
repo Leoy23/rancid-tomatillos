@@ -1,17 +1,18 @@
 .search-field {
-    height: 20px;
-    width: 200px;
-    text-align: center;
-    border-radius: 10px;
+  height: 2rem;
+  width: 15rem;
+  text-align: center;
+  border-radius: 3rem;
+  padding: 0.5rem;
 }
 
 .search-input-box {
-    padding: 10px;
+  padding: 1rem;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 .form-label {
-    display: none;
+  display: none;
 }

@@ -1,68 +1,80 @@
-
 .single-movie-page {
-    background-size: cover;
-    display: flex;
-    justify-content: space-around;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .backdrop-image {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    margin-left: 0%;
-    margin-top: -70px;
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  margin-left: 0%;
+  margin-top: -70px;
+  opacity: 0.4;
 }
 
 .movie-info-container {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    margin: 2%;
-    margin-left: 5%;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: absolute;
 }
 
 .movie-info {
-    border-radius: 5%;
-    background-color: rgba(220, 220, 208, 0.7);
-    color: black;
-    width: 25%;
-    height: 90%;
-    padding: 2%;
-    font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3rem;
+  background-color: rgba(220, 220, 208, 0.7);
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.55em;
+  margin-bottom: 3rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .poster-image {
-    width: 25rem;
-    height:40rem;
-    border-radius: 5%;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 2rem;
+  padding-bottom: 1rem;
 }
 
 .back-button {
-    text-align: center;
-    height: 6%;
-    width: 3%;
-    padding: none;
-    margin: 0%;
-    align-items: center;
-    background: #FFFFFF;
-    border: 0 solid #E2E8F0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    box-sizing: border-box;
-    color: #1A202C;
-    display: inline-flex;
-    font-family: Inter, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    height: 56px;
-    justify-content: center;
-    line-height: 24px;
-    overflow-wrap: break-word;
-    padding: 24px;
-    text-decoration: none;
-    width: auto;
-    border-radius: 8px;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+  text-align: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0%;
+  align-items: center;
+  background: #ffffff;
+  border: 0 solid #e2e8f0;
+  border-radius: 5%;
+}
+
+.back-button:hover {
+  background-color: #ec9f05;
+}
+
+.button-box {
+  padding: 1rem;
+}
+
+@media (min-width: 769px) {
+  .movie-info-container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+  .movie-info {
+    font-size: 1em;
+  }
+  .poster-image {
+    margin-right: 1rem;
+  }
 }
